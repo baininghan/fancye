@@ -1,0 +1,22 @@
+<div>
+	<form>
+		<div class="input-group">
+		<input type="text" id="st-search-input" class="form-control" placeholder="<%= __('search') %>" />
+		<span class="input-group-btn">
+		<button class="btn btn-default" type="submit">GO</button>
+		</span>
+		</div>
+	</form>
+	<script type="text/javascript">
+		var Swiftype = window.Swiftype || {};
+		(function() {
+			Swiftype.key = 'YOUR_KEY';
+			var script = document.createElement('script'); 
+			script.type = 'text/javascript'; 
+			script.async = true;
+			script.src = "//s.swiftypecdn.com/embed.js";
+			var entry = document.getElementsByTagName('script')[0];
+			entry.parentNode.insertBefore(script, entry);
+		}());
+	</script>
+</div>
