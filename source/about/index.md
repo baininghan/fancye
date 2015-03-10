@@ -14,6 +14,9 @@ date: 2015-02-07 17:34:38
 
 ### 主题迭代
 
+#### 2015-03-10
+* **关于**页面增加*多说*评论
+
 #### 2015-03-09
 * 增加文章底部prev和next的导航
 
@@ -46,7 +49,14 @@ date: 2015-02-07 17:34:38
 ### TODO
 * 首页上下文间距过宽，需要调整
 * ~~希望可以增加分页功能~~ **√**
-* 关于页面增加评论
+* ~~关于页面增加评论~~ **√**
 * 博客SEO持续优化
 * 写一篇Java实现二维码的博文
 * 总结思科协作CTS、TMS、CUCM接口开发的博文
+* 修改**继续阅读**样式
+
+
+
+<div class="ds-thread" data-thread-key="/about-me"
+     data-title="about-iissnan" data-url="http://notes.iissnan.com/about/">
+</div>
