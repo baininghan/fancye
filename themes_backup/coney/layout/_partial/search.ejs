@@ -1,0 +1,72 @@
+<% if(theme.google_cse.enable) { %>
+
+<!-- Google 自定义搜索-->
+<div  id="main" class="page">
+  <div id='cse' style='width:100%;text-align:center'>正在加载搜索结果，请稍等。</div>
+</div>
+<script src="http://www.google.com.hk/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+google.load('search', '1', {language : 'zh-CN',style: google.loader.themes.MINIMALIST});
+google.setOnLoadCallback(function(){
+  var customSearchControl = new google.search.CustomSearchControl('<%= theme.google_cse.cx %>');
+  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+  var options = new google.search.DrawOptions();
+  options.setAutoComplete(true);
+  customSearchControl.draw('cse', options);
+  var match = location.search.match(/q=([^&]*)(&|$)/);
+  if(match && match[1]){
+    var search = decodeURIComponent(match[1]); 
+    customSearchControl.execute(search);
+  }
+},true);
+</script>
+<% } else if(theme.swift_search.enable) { %>
+
+<!-- Swiftype 搜索 -->
+<div id="container" class="page">
+<div id="st-results-container" style="width:80%">正在加载搜索结果，请稍等。</div>
+<style>
+.st-results-container {
+	background: #fafafa;
+	display: block;
+	border-left: 0.5em solid #ccc;
+	-webkit-transition: border-left 0.45s;
+	-moz-transition: border-left 0.45s;
+	-o-transition: border-left 0.45s;
+	-ms-transition: border-left 0.45s;
+	transition: border-left 0.45s;
+	padding: 0.5em;
+	}
+	@media only screen and (min-width: 768px) {
+	.st-result-text {
+	padding: 1em;
+	}
+}
+.st-results-container:hover {
+	border-left: 0.5em solid #ea6753;
+}
+.st-results-container h3 a{
+	color: #2ca6cb;
+	line-height: 1.5;
+	font-size: 22px;
+}
+.st-snippet em {
+	font-weight: bold;
+	color: #ea6753;
+}
+</style>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','axWAd67nrkeuySDPqsN6');
+</script>
+<% }else{ %>
+
+<!-- 默认百度搜索 -->
+<script type="text/javascript">
+	document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="http://znsv.baidu.com/customer_search/api/js?sid=11664172870290300197') + '&plate_url=' + (encodeURIComponent(window.location.href)) + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));
+</script>
+<%}%>

@@ -1,0 +1,65 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  Hexo: /tags/hexo
+  # Category: /categories
+  About: /about
+  Essay: /tags/essay
+  # 随笔: /tags/随笔
+
+# SubNav
+subnav:
+  github: http://github.com/baininghan
+  weibo: http://www.weibo.com/fancybai01
+  rss: "/atom.xml"
+  # facebook: "#"
+  # google: "#"
+  # twitter: "#"
+  # linkedin: "#"
+
+rss: /atom.xml
+
+# Content
+excerpt_link: more
+fancybox: true
+mathjax: true
+
+# Miscellaneous
+
+favicon: /img/favicon.png
+
+#你的头像
+avatar: /img/fancye.png #网络图片ＵＲＬ或者本地文件夹中的图片
+#是否开启分享
+share: true
+#是否开启多说评论，填写你在多说申请的项目名称
+#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
+duoshuo: fancye
+disqus_shortname: false
+#是否开启云标签
+tagcloud: true
+
+#是否开启友情链接
+#不开启——
+#friends: false
+#开启——
+friends:
+  Hexo: http://hexo.io
+  PureFrog: http://mycodebattle.com/
+  Litten: http://litten.github.io/
+
+#是否开启“关于我”。
+#不开启——
+#aboutme: false
+#开启——
+aboutme: Enjoy Coding
+# weibo show
+weibo: false
+# 百度统计
+baidu_tongji: true
+# 谷歌统计
+google_analytics:
+	enable: false
+	id: UA-59832982-1
+	site: baininghan.com

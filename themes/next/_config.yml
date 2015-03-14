@@ -1,0 +1,58 @@
+menu:
+  home: /
+  archives: /archives
+  tags: /tags
+  tools: /tools
+  about: /about
+
+# Place your favicon.ico to /source directory.
+favicon: /images/favicon.ico
+
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site's feed link.
+# Set rss to specific value if you have burned your feed already.
+rss: /atom.xml
+
+# Icon fonts
+# Place your font into next/source/fonts, specify directory-name and font-name here
+# Avialable: default | linecons | fifty-shades | feather | fancye
+icon_font: default
+#icon_font: fifty-shades
+#icon_font: feather
+#icon_font: linecons
+
+# Code Highlight theme
+# Available value: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+
+# MathJax Support
+mathjax:
+
+## DO NOT EDIT THE FOLLOWING SETTINGS
+## UNLESS YOU KNOW WHAT YOU ARE DOING
+
+# Use velocity to animate everything.
+use_motion: true
+
+# Fancybox
+fancybox: true
+
+# Static files
+vendors: vendors
+css: css
+images: images
+
+# Theme version
+version: 0.3.0rc4
+
+## creative_commons协议(知识共享)，可选 by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+#creative_commons: by-nc-sa  ## 在博客底部显示
+
+# NexT 主题相关配置 ==========================
+## Google统计/百度统计
+google_analytics: UA-59832982-1
+baidu_analytics: 46c471e44f70373ba12974cc03ef4dc4
+
+## 谷歌站点统计
+google_site_verification: fancye
