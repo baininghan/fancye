@@ -62,4 +62,40 @@ date: 2015-03-12 14:14:35
 * [绿色软件下载](http://www.portablesoft.org/)
 * [NodeJs](http://nodejs.org/dist/v0.10.36/node-v0.10.36.tar.gz)
 
+### CDN
+##### 360
+* [360网站卫士常用前端公共库加速服务](http://libs.useso.com/js.php)
+* 如何使用360网站卫士代理访问Google前端公共库
+1. 首先在程序源代码中找到调用Google前端公共库的地址，比如：
+```
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.4.2'></script>
+```
+2. 将Google前端库的域名 ajax.googleapis.com 修改为：ajax.useso.com 即可，如下所示：
+```
+<script type='text/javascript' src='http://ajax.useso.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.4.2'></script>
+```
+3. 我们会自动将Google前端公共库的JS资源缓存在360网站卫士全国的CDN节点上。Have fun !
+
+* 如何使用360网站卫士代理访问Google免费字体库
+1. 首先在程序源代码中找到调用Google免费字体库的地址，比如：
+```
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet'>
+```
+2. 将Google免费字体库的域名 fonts.googleapis.com 修改为：fonts.useso.com 即可，如下所示：
+```
+<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet'>
+```
+3. 我们会自动将Google免费字体库的字体资源缓存在360网站卫士全国的CDN节点上。Have fun ! 
+如何通过第三方Wordpress字体转换插件继续使用Google字体库？
+(感谢来自淘宝的soulteary童鞋开发了这个插件)
+插件说明地址：<http://www.soulteary.com/2014/06/08/replace-google-fonts.html>
+插件下载地址：<http://www.soulteary.com/wp-content/uploads/2014/06/Replace-Google-Fonts.zip>
+
+##### 百度
+* [CDN资源查找页面](http://developer.baidu.com/wiki/index.php?title=docs/cplat/libs)
+* [百度开放服务平台-文档中心](http://developer.baidu.com/wiki/index.php?title=docs)
+
+##### Google
+* [谷歌免费CDN加速Google PageSpeed Service申请和使用教程](http://www.freehao123.com/google-pagespeed-service/)
+* [用Google建立自己的CDN](http://blog.b3inside.com/essay/build-your-cdn-with-google-app-engine/)
 
