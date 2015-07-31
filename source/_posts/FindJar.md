@@ -1,5 +1,5 @@
 title: "FindJar"
-categories: [Java]
+categories: "Java"
 tags: [FindJar]
 date: 2015-02-05 13:49:00
 ---

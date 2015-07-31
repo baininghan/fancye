@@ -4,7 +4,7 @@
 
 # Site 这里的配置，哪项配置反映在哪里，可以参考我的博客
 title: Fancye # 站点名，站点左上角
-subtitle: "全栈攻城狮修炼中..." # 副标题，站点左上角
+subtitle: "疯狂修炼中..." # 副标题，站点左上角
 description: "Fancye's blog,Java,Python" # 给搜索引擎看的，对站点的描述，可以自定义
 author: Fancye # 在站点左下角可以看到
 email: lvsedehuanxiang@163.com # 你的联系邮箱
@@ -16,15 +16,18 @@ timezone: Asia/ShangHai
 url: http://baininghan.com
 root: /
 permalink: :year/:month/:day/:title/
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
 permalink_defaults:
 
 # Directory
 source_dir: source
 public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
 
 # Writing # 文字布局、写作格式的定义，不修改
 new_post_name: :title.md # File name of new posts
@@ -35,15 +38,24 @@ filename_case: 0
 render_drafts: false # To preview your site with drafts
 post_asset_folder: false # Put all images and other assets in source folder
 relative_link: false
+future: true
 highlight:
   enable: true
   line_number: true
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
 
 # Archives # 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文
 ## 2: Enable pagination
@@ -62,12 +74,6 @@ server_ip: localhost
 logger: false
 logger_format: dev
 
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: MMM D YYYY
-time_format: H:mm:ss
 
 # Pagination # 每页显示文章数，可以自定义
 ## Set per_page to 0 to disable pagination
@@ -75,9 +81,6 @@ per_page: 5
 api_posts_per_page: 5
 pagination_dir: page
 
-# Disqus # Disqus插件，我们会替换成“多说”，不修改
-disqus_shortname: false
-duoshuo_shortname: fancye
 # Extensions # 这里配置站点所用主题和插件，暂时默认，后面会介绍怎么修改
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 plugins:
@@ -85,7 +88,8 @@ plugins:
 - hexo-generator-sitemap
 - hexo-qiniu-sync
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: next ##yilia ## landscape # coney
+theme: next_Mist 
+##snow #next ##yilia ## landscape # coney
 
 exclude_generator:
 
@@ -122,22 +126,33 @@ deploy:
 - type: github
   repository: https://github.com/baininghan/fancye.git
   branch: gh-pages
-- type: gitcafe
-  repository: 
+- type: git
+  repository: git@gitcafe.com:fancy-bai/fancy-bai.git
   branch: gitcafe-pages
-  
+
 ## git-backup
 backup:
-  type: git
+  type: github
   repository:
-    github: git@github.com:baininghan/fancye.git,gh-pages
+    github: https://github.com/baininghan/fancye.git,gh-pages
 	
 # 头像配置
 avatar: /images/fancye.png
 
-# Theme since
-since: 2014
-## next theme configuration
+# =============================================================================
+# NexT Theme configuration
+# =============================================================================
+# Disqus # Disqus插件，我们会替换成“多说”，不修改
+disqus_shortname: false
+
+# 多说
+duoshuo_shortname: fancye
+
+# JiaThis 分享服务
+jiathis: true
+# 多说 分享服务（必须启用多说）
+duoshuo_share: true
+# 社交连接，将在侧边栏中显示
 social: 
   github: https://github.com/baininghan
   #twitter: https://twitter.com/your-user-name
@@ -150,5 +165,25 @@ friend_link:
   PureFrog: http://mycodebattle.com/
   秦无邪: http://cppgirl.com/
   小雪: http://wileam.com/
-  crifan(网络大牛): http://www.crifan.com/
-# EndNexT 主题相关配置 ==========================
+  crifan: http://www.crifan.com/
+  学习下: http://xuexixia.com/
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+creative_commons: by-nc-sa
+
+## Google分析ID
+google_analytics: UA-59832982-1
+# 百度统计ID，此ID是百度统计提供脚本中hm.js?后面那串字符，非百度统计帐号
+baidu_analytics: 46c471e44f70373ba12974cc03ef4dc4
+
+# Google 站长工具验证，请选择 `HTML Meta` 验证方式
+# See: https://www.google.com/webmasters/
+google_site_verification: fancye
+
+# 站点起始时间
+since: 2014
+# =============================================================================
+# End NexT Theme configuration
+# =============================================================================

@@ -14,6 +14,9 @@ date: 2015-02-07 17:34:38
 
 ### 主题迭代
 
+#### 2015-03-25
+* 启用[NexT.Mist](https://github.com/iissnan/hexo-theme-next) 主题
+
 #### 2015-03-10
 * **关于**页面增加*多说*评论
 

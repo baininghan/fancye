@@ -1,5 +1,5 @@
 title: "hasCode in Java"
-categories: [Java]
+categories: "Java"
 tags: [HashCode]
 date: 2015-01-13 18:07:00
 ---
