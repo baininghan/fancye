@@ -1,27 +1,19 @@
 title: 工具
 date: 2015-03-12 14:14:35
+
 ---
 
 ### Hexo
 
 #### Install
 * [Hexo](http://hexo.io)
-* [Hexo：独立博客新玩法](http://www.aips.me/hexo-independent-blog-new-ways.html)
-* [Hexo静态博客使用指南](http://www.thinksaas.cn/group/topic/351118/)
 * [Hexo主题制作](http://my.oschina.net/youxiachai/blog/121659)
 
-#### Demo
-* [Yilia](http://litten.github.io/2014/08/31/hexo-theme-yilia/)
-* [不如](http://ibruce.info/2013/11/22/hexo-your-blog/)
-* [Phase](http://zespia.tw/blog/2012/12/07/hexo-theme-phase/)
-
-
-### 网站
-* [GitHub](https://github.com/)
-* [慕课网](http://www.imooc.com/)
+### 足迹
+* [GitHub](https://github.com/)	传说是最好的IT相亲平台
+* [慕课网](http://www.imooc.com/)	打一打基础
 * [ImportNew](http://www.importnew.com/) 专注Java
 * [作业部落格](https://www.zybuluo.com/mdeditor) 一个在线MarkDown编辑以及分享的网站
-* [国外网站推荐](http://www.egouz.com/)
 * [ThinkSAAS](http://www.thinksaas.cn/) ThinkSAAS是一个轻量级的开源社区系统，是一个可以用来搭建讨论组，bbs和圈子的社区系统。
 
 ### 在线工具
@@ -36,10 +28,9 @@ date: 2015-03-12 14:14:35
 
 ### 在线书籍
 
-#### Java
-
 #### Python
 * [一个网络大牛的Python语言总结](http://www.crifan.com/files/doc/docbook/python_summary/release/html/python_summary.html#run_py_in_cmd)
+* [啄木鸟社区](http://wiki.woodpecker.org.cn/moin/)
 
 #### Git
 * [git-简易指南](http://www.bootcss.com/p/git-guide/)
@@ -49,17 +40,15 @@ date: 2015-03-12 14:14:35
 ### 软件开发工具组件
 
 #### Java
-* [findJar](https://github.com/baininghan/findJar)
+* [FindJar](https://github.com/baininghan/findJar)
 * [DateUtil](https://github.com/baininghan/javaUtils)
-
-#### Python
 
 #### JavaScript
 * [逗比时间框组件](http://chabudai.org/blog/?p=59)
 * [JQueryFuns](http://www.jqueryfuns.com/texiao)
 
 ### 消遣娱乐
-* [SongTaste](http://www.songtaste.com/)
+* <del>[SongTaste](http://www.songtaste.com/)</del> 已成往事
 
 ### 其他
 * [Windows常用工具](http://wsgzao.github.io/post/windows/) (网友[HelloDog](http://wsgzao.github.io/about/)总结)

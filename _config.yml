@@ -88,7 +88,8 @@ plugins:
 - hexo-generator-sitemap
 - hexo-qiniu-sync
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: next_Mist 
+#theme: next_Mist 
+theme: next
 ##snow #next ##yilia ## landscape # coney
 
 exclude_generator:
@@ -123,11 +124,11 @@ qiniu:
 ## branch: gitcafe-pages
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-- type: github
-  repository: https://github.com/baininghan/fancye.git
+- type: git
+  repo: https://github.com/baininghan/fancye.git
   branch: gh-pages
 - type: git
-  repository: git@gitcafe.com:fancy-bai/fancy-bai.git
+  repo: https://gitcafe.com/fancy-bai/fancy-bai.git
   branch: gitcafe-pages
 
 ## git-backup
@@ -137,7 +138,7 @@ backup:
     github: https://github.com/baininghan/fancye.git,gh-pages
 	
 # 头像配置
-avatar: /images/fancye.png
+avatar: /favicon.ico
 
 # =============================================================================
 # NexT Theme configuration

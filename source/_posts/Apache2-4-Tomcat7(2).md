@@ -1,11 +1,11 @@
 title: 'Apache2.4 + Tomcat7负载均衡和集群（二）'
 date: 2015-07-31 20:46:24
-categories: Apache,Tomcat
-tags: Apache,Tomcat
+categories: [Apache,Tomcat]
+tags: [Apache,Tomcat]
 ---
 
 接上篇[Apache2.4 + Tomcat7负载均衡和集群（一）](https://zybuluo.com/Fancy-Bai/note/118782)
-## Apache配置
+## JK配置
 打开`httpd.conf`配置文件
 ```
 # vi /usr/local/apache/conf/httpd.conf
@@ -14,7 +14,7 @@ tags: Apache,Tomcat
 ```
 Include conf/mod_jk.conf
 ```
-新建`mod_jk.logs`，`mod_jk.shm`，`mod_jk.conf`文件，并并在`mod_jk.conf`文件中添加相关配置内容
+新建`mod_jk.logs`，`mod_jk.shm`，`mod_jk.conf`文件，并在`mod_jk.conf`文件中添加相关配置内容
 ```
 # cd /usr/local/apache/logs
 # touch mod_jk.logs
@@ -23,7 +23,6 @@ Include conf/mod_jk.conf
 # touch mod_jk.conf
 # vi mod_jk.conf
 ```
-<!-- more -->
 ```
 LoadModule jk_module modules/mod_jk.so
 <IfModule mod_jk.c>
@@ -49,7 +48,7 @@ LoadModule jk_module modules/mod_jk.so
 # in unix, we use forward slashes:
 ps=/
 
-worker.list=tomcat1,tomcat2,loadbalancer.status
+worker.list=tomcat1,tomcat2,loadbalancer,status
 
 # tomcat1
 # tomcat的server.xml文件中ajp13协议的端口号，默认是8009，
@@ -73,6 +72,14 @@ worker.tomcat2.port=9009
 worker.tomcat2.host=162.16.1.229
 worker.tomcat2.type=ajp13
 worker.tomcat2.lbfactor=1 # 负载均衡权重值（1-100）
+
+# load balancer worker
+worker.loadbalancer.type=lb
+worker.loadbalancer.balanced_workers=tomcat1,tomcat2
+worker.loadbalancer.sticky_session=1
+worker.loadbalancer.sticky_session_force=0
+
+worker.status.type=status
 ```
 ## Tomcat配置
 
@@ -81,9 +88,10 @@ worker.tomcat2.lbfactor=1 # 负载均衡权重值（1-100）
 2. 查找`HTTP/1.1`协议配置的`<Connector>`，因为我们使用的是mod_jk模式，此处可以不用修改，如果想越过Apache代理直接用http协议的方式访问web服务可以修改。也可以注释掉此段标签用于禁止http访问。
 3. 查找`AJP/1.3`协议配置的`<Connector>`，修改默认端口号8009，如果tomcat部署在不同的机器上，则不需要修改。
 ```
-<Connector port="8009" protocolHandlerClassName="org.apache.jk.server.JKCoyoteHandler" protocol="AJP/1.3" redirectPort="8443" />
+<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
 ```
-4. 查找`<Engine>`标签，修改为：
+
+4.查找`<Engine>`标签，修改为：
 ```
 <Engine name="Catalina" defaultHost="localhost" jvmRoute="tomcat1" >
 ```
@@ -104,7 +112,7 @@ worker.tomcat2.lbfactor=1 # 负载均衡权重值（1-100）
                 dropTime="3000"/> 
     <Receiver className="org.apache.catalina.tribes.transport.nio.NioReceiver"
               address="162.16.1.229"
-              port="4000" <!--同一机器上的tomcat此处端口号要不一样-->
+              port="4000"
               autoBind="100"
               selectorTimeout="5000"
               maxThreads="6"/> 
@@ -117,11 +125,11 @@ worker.tomcat2.lbfactor=1 # 负载均衡权重值（1-100）
   <Valve className="org.apache.catalina.ha.tcp.ReplicationValve"
         filter=""/> 
   <Valve className="org.apache.catalina.ha.session.JvmRouteBinderValve"/> 
-  <Deployer className="org.apache.catalina.ha.deploy.FarmWarDeployer"
+  <!--<Deployer className="org.apache.catalina.ha.deploy.FarmWarDeployer"
             tempDir="/tmp/war-temp/"
             deployDir="/tmp/war-deploy/"
             watchDir="/tmp/war-listen/"
-            watchEnabled="false"/> 
+            watchEnabled="false"/> -->
   <ClusterListener className="org.apache.catalina.ha.session.JvmRouteSessionIDBinderListener"/> 
   <ClusterListener className="org.apache.catalina.ha.session.ClusterSessionListener"/> 
 </Cluster>

@@ -1,7 +1,7 @@
 title: 'Apache2.4 + Tomcat7负载均衡和集群（一）'
 date: 2015-07-31 20:46:39
-categories: Apache,Tomcat
-tags: Apache,Tomcat
+categories: [Apache,Tomcat]
+tags: [Apache,Tomcat]
 ---
 
 ## 准备安装包
