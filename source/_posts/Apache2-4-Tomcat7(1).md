@@ -100,6 +100,3 @@ Listen 8000
 ### 5.测试
 启动tomcat：`# /url/local/apache/bin/apachectl start`
 打开浏览器，输入：http://162.16.1.229:8000 (根据个人机器IP不同),如果页面出现`It's Workds！`说明`Apache`安装成功。
-
----
-[Apache2.4 + Tomcat7负载均衡和集群（二）](https://zybuluo.com/Fancy-Bai/note/118883)

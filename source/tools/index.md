@@ -11,8 +11,10 @@ date: 2015-03-12 14:14:35
 
 ### 足迹
 * [GitHub](https://github.com/)	传说是最好的IT相亲平台
+* [StackOverflow](https://stackoverflow.com)
 * [慕课网](http://www.imooc.com/)	打一打基础
 * [ImportNew](http://www.importnew.com/) 专注Java
+* [Google Java Style](http://google.github.io/styleguide/javaguide.html) 来自Google的Java规范
 * [作业部落格](https://www.zybuluo.com/mdeditor) 一个在线MarkDown编辑以及分享的网站
 * [ThinkSAAS](http://www.thinksaas.cn/) ThinkSAAS是一个轻量级的开源社区系统，是一个可以用来搭建讨论组，bbs和圈子的社区系统。
 
@@ -28,14 +30,29 @@ date: 2015-03-12 14:14:35
 
 ### 在线书籍
 
+#### JavaScript
+[Try JQuery](http://try.jquery.com/) 在浏览器上直接编写JQuery
+
 #### Python
 * [一个网络大牛的Python语言总结](http://www.crifan.com/files/doc/docbook/python_summary/release/html/python_summary.html#run_py_in_cmd)
+* [Learn Python the Hard Way](http://learnpythonthehardway.org/)
 * [啄木鸟社区](http://wiki.woodpecker.org.cn/moin/)
+* [Bottle](http://bottlepy.org/docs/dev/index.html) 一个开源的Python开发的Web框架
+* [CodingBat](http://codingbat.com/) Java or Python，打开速度较慢
 
 #### Git
 * [git-简易指南](http://www.bootcss.com/p/git-guide/)
 * [ProGit](http://git.oschina.net/progit/index.html)
 * [Git-Book](http://git-scm.com/book/zh/v1)
+
+#### MongDB
+[MongDB](https://www.mongodb.org/)
+
+#### Ruby
+[Hackety](http://hackety.com/)  此网站需要**科学上网**才能访问
+
+#### 其他
+[Learn Coding With Open Source](http://teamhost.gitbooks.io/learn-coding-with-open-source/content/zh/index.html)
 
 ### 软件开发工具组件
 
@@ -94,6 +111,10 @@ date: 2015-03-12 14:14:35
 ##### Google
 * [谷歌免费CDN加速Google PageSpeed Service申请和使用教程](http://www.freehao123.com/google-pagespeed-service/)
 * [用Google建立自己的CDN](http://blog.b3inside.com/essay/build-your-cdn-with-google-app-engine/)
+
+### pipy国内镜像
+* http://pypi.douban.com/  豆瓣
+* http://pypi.mirrors.ustc.edu.cn/  中国科学技术大学
 
 <div class="ds-thread" data-thread-key="/tools"
      data-title="tools-iissnan" data-url="http://notes.iissnan.com/tools/">

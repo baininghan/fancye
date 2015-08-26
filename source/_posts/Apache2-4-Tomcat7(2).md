@@ -4,7 +4,6 @@ categories: [Apache,Tomcat]
 tags: [Apache,Tomcat]
 ---
 
-接上篇[Apache2.4 + Tomcat7负载均衡和集群（一）](https://zybuluo.com/Fancy-Bai/note/118782)
 ## JK配置
 打开`httpd.conf`配置文件
 ```
@@ -112,7 +111,7 @@ worker.status.type=status
                 dropTime="3000"/> 
     <Receiver className="org.apache.catalina.tribes.transport.nio.NioReceiver"
               address="162.16.1.229"
-              port="4000"
+              port="4000"<!-- 同一台机器上的不同Tomcat，此处端口需要配置不同 -->
               autoBind="100"
               selectorTimeout="5000"
               maxThreads="6"/> 
