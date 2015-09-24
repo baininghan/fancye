@@ -123,6 +123,7 @@ qiniu:
 ## repository: git@gitcafe.com:fancy-bai/fancye.git
 ## branch: gitcafe-pages
 ## Docs: http://hexo.io/docs/deployment.html
+
 deploy:
 - type: git
   repo: https://github.com/baininghan/fancye.git
