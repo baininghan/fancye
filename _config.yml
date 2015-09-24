@@ -126,7 +126,8 @@ qiniu:
 
 deploy:
 - type: git
-  repo: https://github.com/baininghan/fancye.git
+  #repo: https://github.com/baininghan/fancye.git
+  repo: ssh://git@github.com/baininghan/fancye.git
   branch: gh-pages
 - type: git
   repo: https://gitcafe.com/fancy-bai/fancy-bai.git
