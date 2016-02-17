@@ -16,6 +16,14 @@ tags:
 
 ### 主题迭代
 
+#### 2016-02-17
+```
+## 用于验证qq互联
+<meta property="qc:admins" content="3273370147621161670166375" />
+
+E:\item\github\fancye\themes\next\layout\_partials\head.swig
+```
+
 #### 2015-08-03
 * 网站挂了近3个月，因工作忙没时间管理，现在已经全面恢复，文章也事实更新
 
